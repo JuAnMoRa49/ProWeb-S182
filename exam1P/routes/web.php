@@ -21,5 +21,11 @@ Route::get('/', function () {
 
 Route::view('/', 'principal')->name('Inicio');
 Route::view('/vista1', 'vista1')->name('apodoVista1');
-Route::view('/vista2', 'vista2')->name('apodoVista2');
-Route::view('/vista3', 'vista3')->name('apodoVista3');
+
+Route::get('/vista2', function(){ 
+    return view ('vista2');
+});
+
+Route::get('/vista3', function(){ 
+    return view ('vista3');
+});

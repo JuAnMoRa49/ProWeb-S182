@@ -9,9 +9,9 @@
 </head>
 <body>
     
-    @yield('contenido')
-
     @extends('partials.scroll')
+
+    @yield('contenido')
 
 </body>
 </html>
