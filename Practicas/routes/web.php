@@ -2,17 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\diarioController;
-
-
-
-Route::get('/', [diarioController::class,'metodoPrincipal'])->name('apodoPrincipal');
-
-Route::get('/', [diarioController::class,'metodoFormulario'])->name('apodoFormulario');
-
-Route::get('/', [diarioController::class,'metodoRecuerdo'])->name('apodoRecuerdo');
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,15 +20,21 @@ Route::get('/', function () {
 */
 
 
-/*
-Route::view('/', 'principal')->name('Inicio');
-Route::view('/vista1', 'vista1')->name('apodoVista1');
 
-Route::get('/vista2', function(){ 
-    return view ('vista2');
-});
+// Route::view('/', 'welcome')->name('apodoInicio');
+// Route::view('/vista1', 'vista1')->name('apodoVista1');
 
-Route::get('/vista3', function(){ 
-    return view ('vista3');
-});
-*/
+// Route::get('/vista2', function () {
+//     return view('vista2'); 
+// })->name('apodoVista2');
+
+
+// Route::get('/vista3', function () {
+//     return view('vista3'); 
+// })->name('apodoVista3');
+
+
+
+Route::get('/', [diarioController::class, 'metodoInicio'])->name('apodo1');
+Route::get('/formulario', [diarioController::class, 'metodoFormulario'])->name('apodoFormulario');
+Route::get('/recuerdos', [diarioController::class, 'metodoRecuerdo'])->name('apodoRecuerdo');

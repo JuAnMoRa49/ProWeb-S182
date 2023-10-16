@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Recuerdos</title>
 </head>
 <body>
 
-    <h1>Formularios</h1>
+    <h1>Recuerdos</h1>
     
 </body>
 </html>
