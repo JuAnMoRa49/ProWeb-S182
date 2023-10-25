@@ -1,3 +1,10 @@
+@extends('Layouts.plantilla')
+
+@section('title', 'Formulario')
+
+
+@section('contenido')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
