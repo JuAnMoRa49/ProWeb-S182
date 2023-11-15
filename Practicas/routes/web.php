@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\diarioController;
+use App\Http\Controllers\ControllerCRUDD;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,11 +36,17 @@ Route::get('/', function () {
 
 
 
-Route::get('/', [diarioController::class, 'metodoInicio'])->name('apodo1');
-Route::get('/formulario', [diarioController::class, 'metodoFormulario'])->name('apodoFormulario');
-Route::get('/recuerdos', [diarioController::class, 'metodoRecuerdo'])->name('apodoRecuerdo');
-Route::post('/guardarRecuerdo', [diarioController::class, 'metodoGuardar'])->name('guardar');
+Route::get('/', [diarioController::class, 'metodoInicio'])->name('apodoInicio');
 
+Route::get('/recuerdo/create', [ControllerCRUDD::class, 'create'])->name('recuerdo.create');
+
+// Route::get('/recuerdo', [diarioController::class, 'metodoRecuerdo'])->name('apodoRecuerdo');
+
+// Route::post('/guardarRecuerdo', [diarioController::class, 'metodoGuardar'])->name('guardar');
+
+Route::post('/recuerdo', [ControllerCRUDD::class, 'store'])->name('recuerdo.store');
+
+Route::get('/recuerdo', [ControllerCRUDD::class, 'index'])->name('recuerdo.index');
 
 //Rutas agrupadas tipo controller
 

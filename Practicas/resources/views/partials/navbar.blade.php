@@ -7,19 +7,20 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active {{request()->routeIs('apodo1') ? 'text-danger' : '' }}" aria-current="page" href="/" {>
+            <a class="nav-link active {{request()->routeIs('apodo1') ? 'text-danger' : '' }}" aria-current="page" href="/">
                 Home
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link -bottom-3
-            {{request()->routeIs('apodoFormulario') ? 'text-danger' : '' }}" 
-             href="/formulario">Formulario</a>
+            {{request()->routeIs('recuerdo/create') ? 'text-danger' : '' }}" 
+            href="/recuerdo/create">Formulario</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link
-            {{request()->routeIs('apodoRecuerdo') ? 'text-danger' : '' }}
-            " href="/recuerdos">Memorias</a>
+            {{request()->routeIs('recuerdo.index') ? 'text-danger' : '' }}
+            " href="/recuerdo">Memorias</a>
           </li>
           
         </ul>

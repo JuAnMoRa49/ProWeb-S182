@@ -5,17 +5,22 @@
 
 @section('contenido')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuerdos</title>
-</head>
-<body>
-
     <h1>Recuerdos</h1>
     
-</body>
-</html>
+    @foreach ($consultaRecuerdos as $recuerdo)
+
+        <div class="card w-50 mb-3 mt-5">
+            <div class="card-body">
+            <h5 class="card-title"> {{ $recuerdo->titulo }} </h5>
+            <p class="card-text"> {{ $recuerdo->fecha }}</p>
+            <p class="card-text"> {{ $recuerdo->descripcion }}</p>
+            <a href="#" class="btn btn-warning">Editar</a>
+            <a href="#" class="btn btn-danger">Borrar</a>
+
+            </div>
+        </div>
+        
+    @endforeach
+   
+
+@endsection

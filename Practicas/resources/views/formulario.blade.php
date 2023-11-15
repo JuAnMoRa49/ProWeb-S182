@@ -30,18 +30,18 @@
   </div>
 
   <div class="card-body">
-    <form action="/guardarRecuerdo" method="POST">
+    <form action="/recuerdo" method="POST">
       @csrf
       
       <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Titulo:</label>
+          <label class="form-label">Titulo:</label>
           <input type="text" class="form-control" name="txtTitulo" placeholder="Introduce tu titulo" value= "{{old('txtTitulo')}}">
           <p class= "text-danger fst-italic" >{{$errors->first('txtTitulo')}} </p>
       </div>
 
       <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Recuerdo:</label>
-          <input class="form-control" name="txtRecuerdo" placeholder="Introduce tu recuerdo" value= "{{old('txtRecuerdo')}}"></textarea>
+          <label class="form-label">Recuerdo:</label>
+          <input class="form-control" name="txtRecuerdo" placeholder="Introduce tu recuerdo" value= "{{old('txtRecuerdo')}}">
           <p class= "text-danger fst-italic" >{{$errors->first('txtRecuerdo')}} </p>
       </div>
 
